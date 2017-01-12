@@ -1,66 +1,38 @@
 ---
 layout: default
 ---
-
-<div>
-
-  <section>
-    <h1>Jekyll theme based on hack.css</h1>
-
-    <p>
-      Mobile-ready, modern, stylish, simple.
-    </p>
-  </section>
-
-  <section>
-    <h2>What is Jekyll?</h2>
-
-    <p>
-      <code>Jekyll</code> is a simple, blog-aware, static site generator
-      perfect for personal, project,
-      or organization sites. Think of it like a
-      file-based CMS, without all the complexity.
-      <code>Jekyll</code> takes your content, renders Markdown
-      and Liquid templates, and spits out a
-      complete, static website ready to be served by Apache,
-      Nginx or another web server.
-      <code>Jekyll</code> is the engine behind GitHub Pages,
-      which you can use to host sites right
-      from your GitHub repositories.
-    </p>
-  </section>
-
-  <section>
-    <h2>What is hack.css?</h2>
-
-    <p>
-      <code>hack.css</code> is a dead simple css framework. Chech out
-      <a href="http://hackcss.com/">hackcss.com</a> to know more.
-    </p>
-  </section>
-
-  <section>
-    <h2>Getting started</h2>
-
-    <p>
-      <ol>
-        <li>Make sure you have <code>Jekyll</code> up and running</li>
-        <li>Clone
-          <a href="https://github.com/wemake-services/jekyll-theme-hackcss">this repository</a>
-        </li>
-        <li>Customize it</li>
-        <li>Push to <a href="https://pages.github.com/">gh-pages</a></li>
-      </ol>
-
-    </p>
-  </section>
-
-  <section>
-    <h2>Subscribe</h2>
-
-    <p>
-      subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a>
-    </p>
-  </section>
-
+<div class="col-md-9 col-content">
+    {% for post in paginator.posts %}
+      {% include posts.html%}
+    {% endfor %}
+    <nav>
+        <ul class="pagination pagination-posts">
+          {% if paginator.total_pages > 1 %}
+              {% if paginator.previous_page %}
+                <li>
+                  <a href="{{ paginator.previous_page_path | prepend: site.url}}" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+                </li>
+              {% endif %}
+              {% for page in (1..paginator.total_pages) %}
+                  {% if page == paginator.page %}
+                    <li class="active"><span>{{ page }}</span></li>
+                  {% elsif page == 1 %}
+                    <li><a href="{{ site.url }}">{{ page }}</a></li>
+                  {% else %}
+                    <li><a href="{{ site.baseurl | prepend: site.url }}/page{{ page }}">{{ page }}</a></li>
+                  {% endif %}
+                  {% endfor %}
+              {% if !paginator.next_page %}
+                  <li>
+                    <a href="{{ paginator.next_page_path | prepend: site.baseurl | prepend: site.url}}" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+                  </li>
+              {% endif %}
+            {% endif %}
+        </ul>
+    </nav>
+</div>
+<div class="col-md-3 col-sidebar">
+    {% include sidebar_author.html%}
+    {% include sidebar_categories.html%}
+    {% include sidebar_tags.html%}
 </div>

@@ -1,27 +1,34 @@
-# jekyll-theme-hackcss
+基于jekyll博客应用主题
+===
 
-[Dead simple CSS framework](http://hackcss.com/) now with Jekyll.
+pithy是一款适用于jekyll的博客应用主题，基于bootstrap前端框架开发。本着简约的视觉效果设计，目的是希望博客的浏览者能够更多的看到博客内容。
 
-Mobile-ready, modern, stylish, simple.
+使用说明
+===
 
-## Theme modes
+本主题是自由，免费，开源的，你可以克隆为新的仓库作为自己的博客。当然，在克隆仓库时为本主题加颗星，保留power by pithy，那将是对我最大的支持和鼓励。
 
-This theme comes in three modes, which could be configured in `_config.yml`.
+主题效果
+===
+- 首页
+-
+![首页](http://7xlgu7.com1.z0.glb.clouddn.com/pithy-index.jpg)
 
-![Markdown](https://raw.githubusercontent.com/wemake-services/jekyll-theme-hackcss/3cbe97b71a56a19eba386dd928e125b71e50c71e/images/markdown.png)
+- 列表
+-
+![列表](http://7xlgu7.com1.z0.glb.clouddn.com/pithy-list.jpg)
 
-![Standard](https://raw.githubusercontent.com/wemake-services/jekyll-theme-hackcss/3cbe97b71a56a19eba386dd928e125b71e50c71e/images/standard.png)
+- 文章
+-
+![文章](http://7xlgu7.com1.z0.glb.clouddn.com/pithy-post.jpg)
 
-![Dark](https://raw.githubusercontent.com/wemake-services/jekyll-theme-hackcss/3cbe97b71a56a19eba386dd928e125b71e50c71e/images/dark.png)
+反馈
+===
 
-## Installation
+在你浏览或使用本主题时，发现问题或者是有好的建议，希望能够在这里给予反馈。
 
-Clone this repo. Create your own website. Easy.
+[New Issue](https://github.com/guovz/pithy/issues/new)
 
-## Configuration
-
-See [docs](https://github.com/wemake-services/jekyll-theme-hackcss/blob/gh-pages/docs.md).
-
-## License
-
-GNU PGL 3. See [LICENSE](https://github.com/wemake-services/jekyll-theme-hackcss/blob/3cbe97b71a56a19eba386dd928e125b71e50c71e/LICENSE) for more information.
+License
+===
+[MIT License](https://github.com/guovz/pithy/blob/gh-pages/LICENSE.md)
