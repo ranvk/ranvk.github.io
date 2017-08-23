@@ -156,6 +156,8 @@
         <div class="post-excerpt">
             
                 <h5 id="丢弃本地修改"><a href="#丢弃本地修改" class="headerlink" title="丢弃本地修改"></a>丢弃本地修改</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git checkout . &amp;&amp; git clean -xdf</div></pre></td></tr></table></figure>
+<h5 id="Linux打包版本差异"><a href="#Linux打包版本差异" class="headerlink" title="Linux打包版本差异"></a>Linux打包版本差异</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git diff d1b650dc  8e2d69ae  --name-only | xargs zip update.zip</div></pre></td></tr></table></figure>
+<h5 id="Windows打包版本差异"><a href="#Windows打包版本差异" class="headerlink" title="Windows打包版本差异"></a>Windows打包版本差异</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git archive -o updated.zip develop $(git diff d1b650dc 8e2d69ae --name-only)</div></pre></td></tr></table></figure>
             
             <p class="more">
                 <a href="http://ranvk.github.io/2017/08/23/git常用操作/">阅读剩下更多</a>
@@ -216,6 +218,16 @@
         <h3 class="widget-hd"><strong>文章分类</strong></h3>
         <!-- 文章分类 -->
 <ul class="widget-bd">
+    
+    <li>
+        <a href="/categories/Web技术/">Web技术</a>
+        <span class="badge">(1)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/Web技术/生活琐事/">生活琐事</a>
+        <span class="badge">(1)</span>
+    </li>
     
 </ul>
     </section>

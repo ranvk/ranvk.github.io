@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8" >
     <meta name="baidu-site-verification" content="dIcXMeY8Ya" />
     
-    <title>hexo常用操作 | Hexo</title>
+    <title>`Web技术`分类下的文章 | Hexo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" >
     <meta name="keywords" content="运维、php、YII2" >
     <meta name="description" content="个人博客" >
@@ -60,19 +60,19 @@
         <div class="dropnav icon-paragraph-justify" id="JELON__btnDropNav"></div>
         <ul class="menu hidden" id="JELON__menu">
             
-            <li rel="/2017/08/23/hexo常用操作/index.html" class="item ">
+            <li rel="/categories/Web技术/index.html" class="item ">
                 <a href="/" title="首页" class="icon-home">&nbsp;首页</a>
             </li>
             
-            <li rel="/2017/08/23/hexo常用操作/index.html" class="item ">
+            <li rel="/categories/Web技术/index.html" class="item ">
                 <a href="/lab/" title="实验室" class="icon-lab">&nbsp;实验室</a>
             </li>
             
-            <li rel="/2017/08/23/hexo常用操作/index.html" class="item ">
+            <li rel="/categories/Web技术/index.html" class="item ">
                 <a href="/about/" title="关于" class="icon-about">&nbsp;关于</a>
             </li>
             
-            <li rel="/2017/08/23/hexo常用操作/index.html" class="item ">
+            <li rel="/categories/Web技术/index.html" class="item ">
                 <a href="/comment/" title="留言" class="icon-comment">&nbsp;留言</a>
             </li>
             
@@ -122,81 +122,96 @@
     <div class="container body clearfix">
         <section class="content">
             <div class="content-main widget">
-                <!-- 文章页 -->
-<!-- 文章 -->
-<article class="post article">
-    <header class="text-center">
-        <h3 class="post-title"><span>hexo常用操作</span></h3>
-    </header>
-    <p class="post-meta text-center">
-        Uker 发表于
-        <time datetime="2017-08-23T06:31:56.000Z">2017-08-23</time>
-    </p>
-    <div class="post-content">
-        <p>#####生成部署</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo d -g</div></pre></td></tr></table></figure>
-<p>#####生成预览</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo s -g</div></pre></td></tr></table></figure>
-<p>#####新建文章</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new  <span class="string">"hexo常用操作"</span></div></pre></td></tr></table></figure>
-<p>#####新建文章</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new  <span class="string">"hexo常用操作"</span></div></pre></td></tr></table></figure>
+                <!-- 文章分类 -->
 
+    <h3 class="widget-hd">
+        <strong>
+            
+                `Web技术`分类下的文章
+            
+        </strong>
+    </h3>
+    
+        <!-- 文章 -->
+<article class="post">
+    <header>
+        
+        <a class="cat-link" href="/categories/Web技术/">Web技术</a>|<a class="cat-link" href="/categories/Web技术/生活琐事/">生活琐事</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="http://ranvk.github.io/2017/08/23/redis-4-0-1安装/">
+    		redis-4.0.1安装
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Uker 发表于
+        <time datetime="2017-08-23T08:39:01.000Z">2017-08-23</time>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>#####下载</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ wget http://download.redis.io/releases/redis-4.0.1.tar.gz</div></pre></td></tr></table></figure>
+<p>#####安装</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ tar xzf redis-4.0.1.tar.gz</div><div class="line">$ <span class="built_in">cd</span> redis-4.0.1</div><div class="line">$ make &amp;&amp; make install</div></pre></td></tr></table></figure>
+<p>#####注册系统服务</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ cp utils/redis_init_script /etc/init.d/redis</div><div class="line">$ mkdir /etc/redis</div><div class="line">$ cp redis.conf /etc/redis/6379.conf</div></pre></td></tr></table></figure>
+<p>#####修改配置文件,没有的目录或者文件请新建</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ vim /etc/redis/6379.conf</div><div class="line"></div><div class="line">logfile /var/<span class="built_in">log</span>/redis.log</div><div class="line">dir /var/lib/redis</div></pre></td></tr></table></figure>
+<p>#####启动redis</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/etc/init.d/redis start</div></pre></td></tr></table></figure>
+
+            
+            <p class="more">
+                <a href="http://ranvk.github.io/2017/08/23/redis-4-0-1安装/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img="">
+            <a href="http://ranvk.github.io/2017/08/23/redis-4-0-1安装/" title="redis-4.0.1安装">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="//7xs305.com1.z0.glb.clouddn.com/thumbnail/3.jpg" alt="默认配图" >
+                
+            </a>
+        </div>
     </div>
     <p class="post-meta">
-        <span class="post-cat">分类：
-            
-        </span>
+        
+        评论：<a href="http://ranvk.github.io/2017/08/23/redis-4-0-1安装/#comments" class="post-comments">
+            <span 
+              lang="join-count" 
+              class="join-count" 
+              data-url="http://ranvk.github.io/2017/08/23/redis-4-0-1安装/" 
+              data-sourceId="redis-4-0-1安装"
+            >0</span>
+        </a>
+        
+        <!-- 标签 -->
         <span class="post-tags">
             标签：
             
         </span>
     </p>
 </article>
-<div class="article-share clearfix text-center">
-    <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></div>
-    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
-</div>
 
-<!-- 上一篇/下一篇 -->
+<!-- JavaScript 配置 -->
+<script>
+  var yunTieProductKey = "c06bb9930e6f4b38a9997cb9bd17aba5";
+  Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vZXh0ZW5kL2xpc3Rfam9pbl9zY3JpcHQuaHRtbA==", true);
+</script>
 
-<div class="article-nav clearfix">
-    
-    <span class="prev fl">
-        上一篇<br >
-        <a href="/2017/08/23/redis-4-0-1安装/">
-            
-                redis-4.0.1安装
-            
-        </a>
-    </span>
     
 
     
-    <span class="next fr">
-        下一篇<br >
-        <a href="/2017/08/23/git常用操作/">
-            
-                git常用操作
-            
-        </a>
-    </span>
+    <nav class="page-navigator">
+        <span class="page-number current">1</span>
+    </nav>
     
-</div>
 
-<!-- 文章评论 -->
-
-    <div id="comments" class="comments cloud-tie-wrapper"></div>
-    <script>
-    var cloudTieConfig = {
-      url: document.location.href, 
-      sourceId: "hexo常用操作",
-      productKey: "c06bb9930e6f4b38a9997cb9bd17aba5",
-      target: "comments"
-    };
-    var yunManualLoad = true;
-    Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vcGMvbGl2ZXNjcmlwdC5odG1s", true);
-    </script>
 
             </div>
 

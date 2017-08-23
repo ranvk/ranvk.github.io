@@ -136,6 +136,79 @@
 <article class="post">
     <header>
         
+        <a class="cat-link" href="/categories/Web技术/">Web技术</a>|<a class="cat-link" href="/categories/Web技术/生活琐事/">生活琐事</a>
+        
+        <!-- 文章标题 -->
+        
+    <h3 class="post-title">
+    	<a href="http://ranvk.github.io/2017/08/23/redis-4-0-1安装/">
+    		redis-4.0.1安装
+    	</a>
+    </h3>
+
+    </header>
+    <p class="post-meta">
+        Uker 发表于
+        <time datetime="2017-08-23T08:39:01.000Z">2017-08-23</time>
+    </p>
+
+    <div class="post-content">
+        <div class="post-excerpt">
+            
+                <p>#####下载</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ wget http://download.redis.io/releases/redis-4.0.1.tar.gz</div></pre></td></tr></table></figure>
+<p>#####安装</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ tar xzf redis-4.0.1.tar.gz</div><div class="line">$ <span class="built_in">cd</span> redis-4.0.1</div><div class="line">$ make &amp;&amp; make install</div></pre></td></tr></table></figure>
+<p>#####注册系统服务</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ cp utils/redis_init_script /etc/init.d/redis</div><div class="line">$ mkdir /etc/redis</div><div class="line">$ cp redis.conf /etc/redis/6379.conf</div></pre></td></tr></table></figure>
+<p>#####修改配置文件,没有的目录或者文件请新建</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ vim /etc/redis/6379.conf</div><div class="line"></div><div class="line">logfile /var/<span class="built_in">log</span>/redis.log</div><div class="line">dir /var/lib/redis</div></pre></td></tr></table></figure>
+<p>#####启动redis</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/etc/init.d/redis start</div></pre></td></tr></table></figure>
+
+            
+            <p class="more">
+                <a href="http://ranvk.github.io/2017/08/23/redis-4-0-1安装/">阅读剩下更多</a>
+            </p>
+        </div>
+        <div class="post-thumbnail" data-img="">
+            <a href="http://ranvk.github.io/2017/08/23/redis-4-0-1安装/" title="redis-4.0.1安装">
+                
+                    <img class="thumbnail" src="/img/default.png" data-echo="//7xs305.com1.z0.glb.clouddn.com/thumbnail/3.jpg" alt="默认配图" >
+                
+            </a>
+        </div>
+    </div>
+    <p class="post-meta">
+        
+        评论：<a href="http://ranvk.github.io/2017/08/23/redis-4-0-1安装/#comments" class="post-comments">
+            <span 
+              lang="join-count" 
+              class="join-count" 
+              data-url="http://ranvk.github.io/2017/08/23/redis-4-0-1安装/" 
+              data-sourceId="redis-4-0-1安装"
+            >0</span>
+        </a>
+        
+        <!-- 标签 -->
+        <span class="post-tags">
+            标签：
+            
+        </span>
+    </p>
+</article>
+
+<!-- JavaScript 配置 -->
+<script>
+  var yunTieProductKey = "c06bb9930e6f4b38a9997cb9bd17aba5";
+  Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vZXh0ZW5kL2xpc3Rfam9pbl9zY3JpcHQuaHRtbA==", true);
+</script>
+
+    
+        <!-- 文章 -->
+<article class="post">
+    <header>
+        
             <a href="javascript: void(0);" class="cat">未分类</a>
         
         <!-- 文章标题 -->
@@ -227,6 +300,8 @@
         <div class="post-excerpt">
             
                 <h5 id="丢弃本地修改"><a href="#丢弃本地修改" class="headerlink" title="丢弃本地修改"></a>丢弃本地修改</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git checkout . &amp;&amp; git clean -xdf</div></pre></td></tr></table></figure>
+<h5 id="Linux打包版本差异"><a href="#Linux打包版本差异" class="headerlink" title="Linux打包版本差异"></a>Linux打包版本差异</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git diff d1b650dc  8e2d69ae  --name-only | xargs zip update.zip</div></pre></td></tr></table></figure>
+<h5 id="Windows打包版本差异"><a href="#Windows打包版本差异" class="headerlink" title="Windows打包版本差异"></a>Windows打包版本差异</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git archive -o updated.zip develop $(git diff d1b650dc 8e2d69ae --name-only)</div></pre></td></tr></table></figure>
             
             <p class="more">
                 <a href="http://ranvk.github.io/2017/08/23/git常用操作/">阅读剩下更多</a>
@@ -287,6 +362,16 @@
         <h3 class="widget-hd"><strong>文章分类</strong></h3>
         <!-- 文章分类 -->
 <ul class="widget-bd">
+    
+    <li>
+        <a href="/categories/Web技术/">Web技术</a>
+        <span class="badge">(1)</span>
+    </li>
+    
+    <li>
+        <a href="/categories/Web技术/生活琐事/">生活琐事</a>
+        <span class="badge">(1)</span>
+    </li>
     
 </ul>
     </section>
