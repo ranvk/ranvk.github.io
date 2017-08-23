@@ -136,12 +136,12 @@
 
 /**
  * 网站js
- * @author Jelon
+ * @author uker
  * @type {{init, toggleMenu}}
  */
-var JELON = function() {
+var UKER = function() {
     return {
-        name: 'JELON',
+        name: 'UKER',
         version: '0.0.2',
         init: function() {
             this.toggleMenu();
@@ -199,4 +199,4 @@ var JELON = function() {
 /**
  * 程序入口
  */
-JELON.init();
+UKER.init();
