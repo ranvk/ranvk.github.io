@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8" >
     <meta name="baidu-site-verification" content="dIcXMeY8Ya" />
     
-    <title>安装运行shadowsocks | Hexo</title>
+    <title>git常用操作 | uker技术blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" >
     <meta name="keywords" content="运维、php、YII2" >
     <meta name="description" content="个人博客" >
 
     
-    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml" >
+    <link rel="alternative" href="/atom.xml" title="uker技术blog" type="application/atom+xml" >
     
     
     <link rel="shortcut icon" href="/favicon.ico" >
@@ -52,7 +52,7 @@
         <div class="logo">
             <a href="/">
                 <div class="cover">
-                    <span class="name">Hexo</span>
+                    <span class="name">uker技术blog</span>
                     <span class="description"></span>
                 </div>
             </a>
@@ -60,19 +60,15 @@
         <div class="dropnav icon-paragraph-justify" id="JELON__btnDropNav"></div>
         <ul class="menu hidden" id="JELON__menu">
             
-            <li rel="/2017/08/23/安装运行shadowsocks/index.html" class="item ">
+            <li rel="/2017/08/23/git/index.html" class="item ">
                 <a href="/" title="首页" class="icon-home">&nbsp;首页</a>
             </li>
             
-            <li rel="/2017/08/23/安装运行shadowsocks/index.html" class="item ">
-                <a href="/lab/" title="实验室" class="icon-lab">&nbsp;实验室</a>
-            </li>
-            
-            <li rel="/2017/08/23/安装运行shadowsocks/index.html" class="item ">
+            <li rel="/2017/08/23/git/index.html" class="item ">
                 <a href="/about/" title="关于" class="icon-about">&nbsp;关于</a>
             </li>
             
-            <li rel="/2017/08/23/安装运行shadowsocks/index.html" class="item ">
+            <li rel="/2017/08/23/git/index.html" class="item ">
                 <a href="/comment/" title="留言" class="icon-comment">&nbsp;留言</a>
             </li>
             
@@ -100,7 +96,7 @@
                         <b>■</b>
                         公众号
                         <span class="popover">
-                            <img src="/img/wechat_mp.jpg" width="120" height="120" alt="我的微信订阅号">
+                            <img src="#" width="120" height="120" alt="我的微信订阅号">
                             <i class="arrow"></i>
                         </span>
                     </a>
@@ -123,22 +119,16 @@
 <!-- 文章 -->
 <article class="post article">
     <header class="text-center">
-        <h3 class="post-title"><span>安装运行shadowsocks</span></h3>
+        <h3 class="post-title"><span>git常用操作</span></h3>
     </header>
     <p class="post-meta text-center">
         Uker 发表于
-        <time datetime="2017-08-23T06:31:56.000Z">2017-08-23</time>
+        <time datetime="2017-08-23T03:44:10.000Z">2017-08-23</time>
     </p>
     <div class="post-content">
-        <p>#####安装python、shadowsocks</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ curl <span class="string">"https://bootstrap.pypa.io/get-pip.py"</span> -o <span class="string">"get-pip.py"</span></div><div class="line">$ python get-pip.py</div><div class="line">$ pip install --upgrade pip</div><div class="line">$ pip install shadowsocks</div></pre></td></tr></table></figure>
-<p>#####运行shadowsocks</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#运行</span></div><div class="line">$ ssserver -p port -k password -m rc4-md5</div><div class="line"><span class="comment">#如果要后台运行：</span></div><div class="line">$ ssserver -p port -k password -m rc4-md5 --user nobody -d start</div></pre></td></tr></table></figure>
-<p>#####停止shadowsocks</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ssserver -d stop</div></pre></td></tr></table></figure>
-<p>$ curl “<a href="https://bootstrap.pypa.io/get-pip.py" target="_blank" rel="external">https://bootstrap.pypa.io/get-pip.py</a>“ -o “get-pip.py”<br>$ python get-pip.py<br>$ pip install –upgrade pip<br>$ pip install shadowsocks</p>
-<p>#####检查日志：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ less /var/<span class="built_in">log</span>/shadowsocks.log</div><div class="line"><span class="comment">#用 -h 查看所有参数。你也可以使用 配置文件 进行配置</span></div></pre></td></tr></table></figure></p>
-
+        <h5 id="丢弃本地修改"><a href="#丢弃本地修改" class="headerlink" title="丢弃本地修改"></a>丢弃本地修改</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git checkout . &amp;&amp; git clean -xdf</div></pre></td></tr></table></figure>
+<h5 id="Linux打包版本差异"><a href="#Linux打包版本差异" class="headerlink" title="Linux打包版本差异"></a>Linux打包版本差异</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git diff d1b650dc  8e2d69ae  --name-only | xargs zip update.zip</div></pre></td></tr></table></figure>
+<h5 id="Windows打包版本差异"><a href="#Windows打包版本差异" class="headerlink" title="Windows打包版本差异"></a>Windows打包版本差异</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git archive -o updated.zip develop $(git diff d1b650dc 8e2d69ae --name-only)</div></pre></td></tr></table></figure>
     </div>
     <p class="post-meta">
         <span class="post-cat">分类：
@@ -148,7 +138,7 @@
             标签：
             
     
-        <a href="/tags/shadowsocks/" title="shadowsocks">shadowsocks</a>
+        <a href="/tags/git/" title="git">git</a>
     
 
         </span>
@@ -165,9 +155,9 @@
     
     <span class="prev fl">
         上一篇<br >
-        <a href="/2017/08/23/redis-4-0-1安装/">
+        <a href="/2017/08/23/shadowsocks/">
             
-                redis-4.0.1安装
+                安装运行shadowsocks
             
         </a>
     </span>
@@ -176,11 +166,7 @@
     
     <span class="next fr">
         下一篇<br >
-        <a href="/2017/08/23/git常用操作/">
-            
-                git常用操作
-            
-        </a>
+        <a href="javascript: void(0);">没有下一篇了</a>
     </span>
     
 </div>
@@ -191,7 +177,7 @@
     <script>
     var cloudTieConfig = {
       url: document.location.href, 
-      sourceId: "安装运行shadowsocks",
+      sourceId: "git",
       productKey: "c06bb9930e6f4b38a9997cb9bd17aba5",
       target: "comments"
     };
@@ -225,9 +211,9 @@
   
     <a class="tag-item" href="/tags/git/" title="git">git (1)</a>
   
-    <a class="tag-item" href="/tags/hexo/" title="hexo">hexo (1)</a>
-  
     <a class="tag-item" href="/tags/redis/" title="redis">redis (1)</a>
+  
+    <a class="tag-item" href="/tags/hexo/" title="hexo">hexo (1)</a>
   
     <a class="tag-item" href="/tags/shadowsocks/" title="shadowsocks">shadowsocks (1)</a>
   
