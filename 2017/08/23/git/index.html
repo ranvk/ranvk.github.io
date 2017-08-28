@@ -129,6 +129,9 @@
         <h5 id="丢弃本地修改"><a href="#丢弃本地修改" class="headerlink" title="丢弃本地修改"></a>丢弃本地修改</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git checkout . &amp;&amp; git clean -xdf</div></pre></td></tr></table></figure>
 <h5 id="Linux打包版本差异"><a href="#Linux打包版本差异" class="headerlink" title="Linux打包版本差异"></a>Linux打包版本差异</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git diff d1b650dc  8e2d69ae  --name-only | xargs zip update.zip</div></pre></td></tr></table></figure>
 <h5 id="Windows打包版本差异"><a href="#Windows打包版本差异" class="headerlink" title="Windows打包版本差异"></a>Windows打包版本差异</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git archive -o updated.zip develop $(git diff d1b650dc 8e2d69ae --name-only)</div></pre></td></tr></table></figure>
+<h5 id="master合并分支develop"><a href="#master合并分支develop" class="headerlink" title="master合并分支develop"></a>master合并分支develop</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">#切换到master</div><div class="line">$ git checkout master</div><div class="line">$ git merge develop</div></pre></td></tr></table></figure>
+<h5 id="master合并分冲突develop"><a href="#master合并分冲突develop" class="headerlink" title="master合并分冲突develop"></a>master合并分冲突develop</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">#切换到master</div><div class="line">$ git checkout master</div><div class="line"></div><div class="line">#合并冲突分支</div><div class="line">$ git merge develop</div><div class="line">Auto-merging readme.txt</div><div class="line">CONFLICT (content): Merge conflict in readme.txt</div><div class="line">Automatic merge failed; fix conflicts and then commit the result.</div><div class="line"></div><div class="line">#查看冲突文件</div><div class="line">$ git status</div><div class="line"># On branch master</div><div class="line"># Your branch is ahead of &apos;origin/master&apos; by 2 commits.</div><div class="line">#</div><div class="line"># Unmerged paths:</div><div class="line">#   (use &quot;git add/rm &lt;file&gt;...&quot; as appropriate to mark resolution)</div><div class="line">#</div><div class="line">#       both modified:      readme.txt</div><div class="line">#</div><div class="line">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)</div><div class="line"></div><div class="line">#Git用&lt;&lt;&lt;&lt;&lt;&lt;&lt;，=======，&gt;&gt;&gt;&gt;&gt;&gt;&gt;标记出不同分支的内容</div><div class="line">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</div><div class="line">I&apos;m master</div><div class="line">=======</div><div class="line">I&apos;m develop</div><div class="line">&gt;&gt;&gt;&gt;&gt;&gt;&gt; develop</div><div class="line"></div><div class="line">#手动修改文件后重新提交</div><div class="line">$ git add </div><div class="line">$ git commmit -m &quot;&quot;</div><div class="line">$ git push</div></pre></td></tr></table></figure>
+
     </div>
     <p class="post-meta">
         <span class="post-cat">分类：
@@ -209,11 +212,11 @@
         <!-- 文章标签 -->
 <div class="widget-bd tag-wrap">
   
+    <a class="tag-item" href="/tags/hexo/" title="hexo">hexo (1)</a>
+  
     <a class="tag-item" href="/tags/git/" title="git">git (1)</a>
   
     <a class="tag-item" href="/tags/redis/" title="redis">redis (1)</a>
-  
-    <a class="tag-item" href="/tags/hexo/" title="hexo">hexo (1)</a>
   
     <a class="tag-item" href="/tags/shadowsocks/" title="shadowsocks">shadowsocks (1)</a>
   
